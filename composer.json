@@ -23,6 +23,14 @@
         "codeception/codeception": "2.0.*",
         "scrutinizer/ocular": "^1.1"
     },
+    "config": {
+        "fxp-asset": {
+            "vcs-driver-options": {
+                "github-no-api": true
+            },
+            "pattern-skip-version": "(-build|-patch)"
+        }
+    },
     "autoload": {
         "psr-4": {
             "dstotijn\\yii2jsv\\": "src/",
