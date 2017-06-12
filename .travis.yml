@@ -18,6 +18,8 @@ matrix:
 
 install:
   - travis_retry composer self-update
+  - composer config --global github-protocols 'https'
+  - composer config --global github-oauth.github.com "$GITHUB_TOKEN"
   - travis_retry composer global require 'fxp/composer-asset-plugin'
   - travis_retry composer update --no-interaction --prefer-dist
   - |
